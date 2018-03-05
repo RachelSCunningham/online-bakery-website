@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--Author: Rachel Cunningham-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Online Bakery Website">
+	<meta name="keywords" content="Bakery, Rachel, Cake, Bread, Bake, Cupcake, Muffin">
+	<meta name="author" content="Rachel Cunningham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+	
+	<title>Cart</title>
+	
+<style>
+	/*Defines the background colour of the page as light pink.*/
+	body {
+		background-color: #FEDEF9;
+	}
+	
+	/*Defines the wrapper class in which most of the content resides. Width, margin, colour, and font styles all defined.*/
+	.wrapper {
+		width: 940px;
+		margin: 20px auto 20px auto;
+		border: 6px solid white;
+		color: white;
+		background-color: darkred;
+		font-family: 'Love Ya Like A Sister', cursive;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*Defines the page footer at the bottom of the page.*/
+	footer {
+		clear: both;
+		color: darkred;
+		background-color: #FEDEF9;
+		height: 65px;
+		text-align: center;
+		border-radius: 0px 0px 5px 5px; 
+	}
+	
+	/*gives the class 'desc' within the section its own definitions of margins and border radius.*/
+	section.desc {
+		margin: 20px 20px 20px 20px;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*defines the header image at the top of the page.*/
+	img.header {
+		display: block;
+		width: 700px;
+		border-radius: 15px 15px 15px 15px;
+		margin-left: auto;
+		margin-right: auto; 
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*describes the height of the FB image.*/
+	img.facebookImage{
+		height: 15px;
+	}
+	
+	/*Defines the sidebar menu id.*/
+	#mySidenav a {
+		position: absolute; 
+		left: 10px; 
+		transition: 0.1s; 
+		padding: 15px; 
+		width: 120px; 
+		text-decoration: none; 
+		font-family: 'Love Ya Like A Sister', cursive;
+		font-size: 20px; 
+		color: white; 
+		border-radius: 0 15px 15px 0; 
+	}
+	
+	/*Asserts the animation on hover over the ids Sidenav: i.e. on hover move to the left.*/
+	#mySidenav a:hover {
+		left: 0; 
+	}
+	
+	/*Defines each of the sidebar items and their ids.*/
+	#home {
+		top: 250px;
+		background-color: darkred;
+	}
+
+	#bread {
+		top: 310px;
+		background-color: darkred; 
+	}
+
+	#cake {
+		top: 370px;
+		background-color: darkred;
+	}
+
+	#confec {
+		top: 430px;
+		background-color: darkred;
+	}
+	
+	#logIn {
+		top: 490px;
+		background-color: darkred;
+	}
+	
+	#faq {
+		top: 550px;
+		background-color: darkred;
+	}
+	
+	#contact {
+		top: 610px;
+		background-color: darkred;
+	}
+	
+	#facebook{
+		top: 670px;
+		background-color: darkred;
+	}
+	
+	/*Defines the shopping cart class.*/
+	.shopping-cart {
+		width: 750px;
+		margin: 80px auto;
+		background: #FFFFFF;
+		border-radius: 6px;
+		flex-direction: column;
+	}
+	
+	/*Defines each of the classes within the shopping-cart class*/
+	.title {
+		height: 60px;
+		border-bottom: 1px solid #E1E8EE;
+		padding: 20px 30px;
+		font-size: 25px;
+		font-weight: 400;
+		color: darkred;
+	}
+	
+	.item {
+		padding: 1px 30px;
+		height: 55px;
+		display: flex;
+	}	
+	
+	.description {
+		width: 110px;
+		padding-top: 20px;
+		text-align: center;
+		font-size: 16px;
+		color: darkred;
+		font-weight: 300;
+	}
+	
+	.quant {
+		width: 140px;
+		padding-top: 20px;
+		text-align: center;
+		font-size: 16px;
+		color: darkred;
+		font-weight: 300;
+	}
+	
+	.placeOrder {
+		width: 600px;
+		padding-top: 27px;
+		padding-left: 27px;
+		text-align: left;
+		font-size: 18px;
+		color: darkred;
+		font-weight: 300;
+	}
+	
+	.description span {
+		display: block;
+		font-size: 14px;
+		color: darkred;
+		font-weight: 400;
+		margin-bottom: 8px;
+		margin-top: 3px;
+	}
+	 
+	.total-price {
+		width: 83px;
+		padding-top: 20px;
+		text-align: center;
+		font-size: 16px;
+		color: darkred;
+		font-weight: 300;
+	}
+	
+	/*Defines the text of the heading4 as black with underlining.*/
+	h4 {
+		color: black;
+		text-decoration: underline;
+	}
+</style>	
+</head>
+
+<body>
+	<header>
+		<!--The header image of the page-->
+		<img class="header" src="images/header.png" alt="Image of logo header" title="Header Logo">
+		
+		<!--Sidebar navigation-->
+		<nav>
+			<div id="mySidenav" class="sidenav">
+				<a href="index.html" id="home">Home</a>
+				<a href="bread.html" id="bread">Breads</a>
+				<a href="cakes.html" id="cake">Cakes</a>
+				<a href="confec.html" id="confec">Confectionary</a>
+				<a href="logIn.html" id="logIn">Check Out</a>
+				<a href="faq.html" id="faq">F.A.Q.</a>
+				<a href="contactUs.html" id="contact">Contact Us</a>
+				<a href="https://www.facebook.com/search/top/?q=rachel%27s%20bakery" id="facebook" target="_blank">Facebook <img class="facebookImage" src="images/facebook.png" alt="Image of facebook logo" title="Facebook Link"></a>
+			</div>
+		</nav>
+	</header>
+	<div class="wrapper">
+		<section class="desc">
+			<!--The shopping-cart class-->
+			<div class="shopping-cart">
+				<div class="title">
+					Shopping Bag
+				</div>
+				<!--Divider for each item you can purchase. Includes input quantities for orders-->
+				<div class="item">	  
+					<div class="description">
+					  <span>White bread loaf</span>
+					</div>
+					<div class="total-price">€2.50</div>
+					<div class= "quant">
+						Quantity: 
+						<input id="quantity1" value="0" size="5">	
+					</div>
+				 </div>
+				<div class="item">
+					<div class="description">
+					  <span>Soda bread loaf</span>
+					</div>
+					<div class="total-price">€3.00</div>
+					<div class= "quant">
+						Quantity: 
+						<input id="quantity2" value="0" size="5">
+					</div>
+				</div>
+				<div class="item">
+					<div class="description">
+					  <span>Spelt bread loaf</span>
+					</div>
+					<div class="total-price">€3.00</div>
+					<div class= "quant">
+						Quantity: 
+						<input id="quantity3" value="0" size="5">	
+					</div>
+				</div>
+				<div class="item">
+					<div class="description">
+					  <span>Scones</span>
+					</div>
+					<div class="total-price">€0.60</div>
+					<div class= "quant">
+						Quantity: 
+						<input id="quantity4" value="0" size="5">	
+					</div>
+				</div>
+				<div class="item">
+					<div class="description">
+					  <span>Bread rolls</span>
+					</div>
+					<div class="total-price">€0.40</div>
+					<div class= "quant">
+						Quantity: 
+						<input id="quantity5" value="0" size="5">	
+					</div>
+				</div>
+				<div class="item">	  
+					<div class="description">
+					  <span>Chocolate cake</span>
+					</div>
+					<div class="total-price">€12.50</div>
+					<div class= "quant">
+						Quantity: 
+						<input id="quantity6" value="0" size="5">	
+					</div>
+				 </div>
+				<div class="item">
+					<div class="description">
+					  <span>Carrot cake</span>
+					</div>
+					<div class="total-price">€10.00</div>
+					<div class= "quant">
+						Quantity: 
+						<input id="quantity7" value="0" size="5">	
+					</div>
+				</div>
+				<div class="item">
+					<div class="description">
+					  <span>Lemon cake</span>
+					</div>
+					<div class="total-price">€12.50</div>
+					<div class= "quant">
+						Quantity: 
+						<input id="quantity8" value="0" size="5">	
+					</div>>
+				</div>
+				<div class="item">
+					<div class="description">
+					  <span>Fruit Cake</span>
+					</div>
+					<div class="total-price">€20.00</div>
+					<div class= "quant">
+						Quantity: 
+						<input id="quantity9" value="0" size="5">	
+					</div>
+				</div>
+				<div class="item">
+					<div class="description">
+					  <span>Strawberry cake</span>
+					</div>
+					<div class="total-price">€12.50</div>
+					<div class= "quant">
+						Quantity: 
+						<input id="quantity10" value="0" size="5">	
+					</div>
+				</div>
+				<div class="placeOrder">
+					<p>
+						Please confirm your delivery address below:<br>
+						<!--form to input delivery address-->
+						<form>
+							<textarea id="mailAddress" name="your-message" cols="40" rows="5" required></textarea><br>
+						</form>
+						<b>Please note there is a 5 euro delivery charge</b><br>
+						<!--Button that caluculates the total order costs of items-->
+						<button onclick="calcOrder()">Calculate total order cost</button><br>					
+					</p>
+					<h4 id="orderTotal">
+						<br>
+					</h4>
+					<p>
+						If you wish to continue with your order please submit your credit card details below:
+						<!--Form to input payment details. Uses HTML input validation.-->
+						<form>
+							Card No: <br>
+							<input type="number" id="cardNo" value="" size="40" required><br>
+							CVS: <br>
+							<input type="number" id="cvs" value="" size="40" required><br>
+							Cardholder's Name:<br>
+							<input type="text" id="cardName" value="" size="40" required><br>
+							Cardholder's Address<br>
+							<input type="text" id="cardAd" value="" size="40" required><br>
+						</form>
+						<button onclick="submitOrder()">Submit Order</button><br>
+						<br>
+				</div>
+			</div>
+		</section>	
+		<!--footer at bottom of the page-->
+		<footer>
+			<br>
+			<b>DISCLAIMER: This is not a real bakery or website. All images and prices are for illustration purposes only.</b>
+		</footer>
+	</div>
+</body>
+<script>
+//Functon to calculate the cost of the order.
+function calcOrder(){
+	//variables created to parse the input values and then multiply by the respective cost items: 
+	var calcBread1 = parseFloat(document.getElementById("quantity1").value);
+	var bread1 = 2.50 * calcBread1;
+	
+	var calcBread2 = parseFloat(document.getElementById("quantity2").value);
+	var bread2 = 3 * calcBread2;
+	
+	var calcBread3 = parseFloat(document.getElementById("quantity3").value);
+	var bread3 = 3 * calcBread3;
+	
+	var calcBread4 = parseFloat(document.getElementById("quantity4").value);
+	var bread4 = 0.60 * calcBread4;
+	
+	var calcBread5 = parseFloat(document.getElementById("quantity5").value);
+	var bread5 = 0.40 * calcBread5;
+	
+	var calcCake1 = parseFloat(document.getElementById("quantity6").value);
+	var cake1 = 12.5 * calcCake1;
+	
+	var calcCake2 = parseFloat(document.getElementById("quantity7").value);
+	var cake2 = 10 * calcCake2;
+
+	var calcCake3 = parseFloat(document.getElementById("quantity8").value);
+	var cake3 = 12.50 * calcCake3;
+
+	var calcCake4 = parseFloat(document.getElementById("quantity9").value);
+	var cake4 = 20 * calcCake4;
+	
+	var calcCake5 = parseFloat(document.getElementById("quantity10").value);
+	var cake5 = 12.50 * calcCake5;
+	
+	//Output the total cost of delivery using the variables, and confirm the delivery address.
+	document.getElementById("orderTotal").innerHTML = "Your delivery will be sent to " + (document.getElementById("mailAddress").value) + ". " + "Your order total, including delivery, is €" + (bread1 + bread2 + bread3 + bread4 + bread5 + cake1 + cake2 + cake3 + cake4 + cake5 + 5);		
+}
+
+//function to fill out card details to submit order.
+function submitOrder(){	
+	//If any of the input values are empty alery the user.
+	if(
+		document.getElementById("cardNo").value == "")
+	{
+		alert( "Please enter your card number" );
+		return false
+	}else if(
+		document.getElementById("cvs").value == "")
+	{
+		alert( "Please enter your CVS number" );
+		return false
+	}else if(
+		document.getElementById("cardName").value == "")
+	{
+		alert( "Please enter the name of the card owner" );
+		return false
+	}else if(
+		document.getElementById("cardAd").value == "")
+	{
+		alert( "Please enter the cardholder's address" );
+		return false
+	}else{
+		//if everything is correct alert the user that the order is submitted and redirect to the home page.
+		alert( "Your order has been submitted, thank you! We will get in touch soon and arrange a delivery time" );
+        location.href="index.html"
+		return true
+	}
+}
+</script>
+</html>

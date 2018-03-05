@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--Author: Rachel Cunningham-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Online Bakery Website">
+	<meta name="keywords" content="Bakery, Rachel, Cake, Bread, Bake, Cupcake, Muffin">
+	<meta name="author" content="Rachel Cunningham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+	
+	<title>Doughnuts</title>
+	
+<style>
+	/*Defines the background colour of the page as light pink.*/
+	body {
+		background-color: #FEDEF9;
+	}
+	
+	/*Defines the wrapper class in which most of the content resides. Width, margin, colour, and font styles all defined.*/
+	.wrapper {
+		width: 940px;
+		margin: 20px auto 20px auto;
+		border: 6px solid white;
+		color: white;
+		background-color: darkred;
+		font-family: 'Love Ya Like A Sister', cursive;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*Defines the page footer at the bottom of the page.*/
+	footer {
+		clear: both;
+		color: darkred;
+		background-color: #FEDEF9;
+		height: 45px;
+		text-align: center;
+		border-radius: 0px 0px 5px 5px; 
+	}
+	
+	/*gives the class 'desc' within the section its own definitions of margins and border radius.*/
+	section.desc {
+		margin: 20px 20px 20px 20px;
+		text-align: center;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*defines the header image at the top of the page.*/
+	img.header {
+		display: block;
+		width: 700px;
+		border-radius: 15px 15px 15px 15px;
+		margin-left: auto;
+		margin-right: auto; 
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*describes the height of the FB image.*/
+	img.facebookImage{
+		height: 15px;
+	}
+	
+	/*Defines the sidebar menu id.*/
+	#mySidenav a {
+		position: absolute; 
+		left: 10px; 
+		transition: 0.1s; 
+		padding: 15px; 
+		width: 120px; 
+		text-decoration: none; 
+		font-family: 'Love Ya Like A Sister', cursive;
+		font-size: 20px; 
+		color: white; 
+		border-radius: 0 15px 15px 0; 
+	}
+	
+	/*Asserts the animation on hover over the ids Sidenav: i.e. on hover move to the left.*/
+	#mySidenav a:hover {
+		left: 0; 
+	}
+	
+	/*Defines each of the sidebar items and their ids.*/
+	#home {
+		top: 250px;
+		background-color: darkred;
+	}
+
+	#bread {
+		top: 310px;
+		background-color: darkred; 
+	}
+
+	#cake {
+		top: 370px;
+		background-color: darkred;
+	}
+
+	#confec {
+		top: 430px;
+		background-color: darkred;
+	}
+	
+	#logIn {
+		top: 490px;
+		background-color: darkred;
+	}
+	
+	#faq {
+		top: 550px;
+		background-color: darkred;
+	}
+	
+	#contact {
+		top: 610px;
+		background-color: darkred;
+	}
+	
+	#facebook{
+		top: 670px;
+		background-color: darkred;
+	}
+	
+	/*Gives a colour to each of the text links, light pink.*/
+	#links {
+		color: #FEDEF9;
+	}
+	
+	/*Defines the Slideshow Container size and positioning.*/
+	.slideshow-container {
+		max-width: 500px;
+		position: relative;
+		margin: auto;
+	}
+
+	/*Defines the styles of the previous and next buttons of the slideshow.*/
+	.prev, .next {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		margin-top: -22px;
+		padding: 16px;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		transition: 1s ease;
+		border-radius: 0 3px 3px 0;
+	}
+
+	/*Defines the position of the next button.*/
+	.next {
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	}
+	
+	/*Defines the position of the previous butoon.*/
+	.prev{
+		left: 0;
+		border-radius: 3px 0 0 3px;
+	}
+	
+	/*When hovering over the previous or next buttons turn the buttons light pink.*/
+	.prev:hover, .next:hover {
+		background-color: #FEDEF9;
+	}
+	
+	/*Defines the number text */
+	.numbertext {
+		color: #f2f2f2;
+		font-size: 12px;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+	}
+	
+	/*Defines the dots on slideshow.*/
+	.dot {
+		cursor:pointer;
+		height: 13px;
+		width: 13px;
+		margin: 0 2px;
+		background-color: #FEDEF9;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+	
+	/*When the dots are active or hovered over change the colour.*/ 
+	.active, .dot:hover {
+		background-color: #717171;
+	}
+
+	/*The fading animation between the images.*/
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+
+	@-webkit-keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+	}
+
+	@keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+	}
+</style>	
+</head>
+<body>
+	<header>
+		<!--The header image of the page-->
+		<img class="header" src="../images/header.png" alt="Image of logo header" title="Header Logo">
+		
+		<!--Sidebar navigation-->
+		<nav>
+			<div id="mySidenav" class="sidenav">
+				<a href="../index.html" id="home">Home</a>
+				<a href="../bread.html" id="bread">Breads</a>
+				<a href="../cakes.html" id="cake">Cakes</a>
+				<a href="../confec.html" id="confec">Confectionary</a>
+				<a href="../logIn.html" id="logIn">Check Out</a>
+				<a href="../faq.html" id="faq">F.A.Q.</a>
+				<a href="../contactUs.html" id="contact">Contact Us</a>
+				<a href="https://www.facebook.com/search/top/?q=rachel%27s%20bakery" id="facebook" target="_blank">Facebook <img class="facebookImage" src="../images/facebook.png" alt="Image of facebook logo" title="Facebook Link"></a>
+			</div>
+		</nav>
+	</header>
+	<div class="wrapper">
+		<section id="text" class="desc">
+			<p>
+				For a tasty and naughty treat we make a selection of doughnuts each morning. Usually sold out by midday, we make different batches each day depending on what our baker feels like!<br>
+				We sell these only in store in Sligo, please <a id="links" href="../contactUs.html">ring us</a> at 071 9166666 if you want to preorder.
+			</p> 
+			<br>
+			<!--Slideshow containers with classes containing cycleable images-->
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 6</div>
+						<img src="../images/confec/donut1.jpeg" style="width:100%">
+				</div>
+
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 6</div>
+						<img src="../images/confec/donut2.jpeg" style="width:100%">
+				 </div>
+
+				 <div class="mySlides fade">
+					<div class="numbertext">3 / 6</div>
+					<img src="../images/confec/donut3.jpeg" style="width:100%">
+				 </div>
+				 
+				  <div class="mySlides fade">
+					<div class="numbertext">4 / 6</div>
+					<img src="../images/confec/donut4.jpeg" style="width:100%">
+				 </div>
+				 
+				  <div class="mySlides fade">
+					<div class="numbertext">5 / 6</div>
+					<img src="../images/confec/donut5.jpeg" style="width:100%">
+				 </div>
+				 
+				  <div class="mySlides fade">
+					<div class="numbertext">6 / 6</div>
+					<img src="../images/confec/donut6.jpeg" style="width:100%">
+				 </div>
+				
+				<!--The previous and next buttons-->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+			<!--Navigation by dots-->
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span> 
+				<span class="dot" onclick="currentSlide(2)"></span> 
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span> 
+				<span class="dot" onclick="currentSlide(5)"></span> 
+				<span class="dot" onclick="currentSlide(6)"></span> 
+			</div>
+		</section>
+		<!--Footer at the bottom of the page.-->
+		<footer>
+			<br>
+			<b>DISCLAIMER: This is not a real bakery or website. All images and prices are for illustration purposes only.</b><br>
+		</footer>
+	</div>
+</body>
+<script>
+//create the variable for slide index.
+var slideIndex = 1;
+showSlides(slideIndex);
+
+//create function for 'next' and 'previous'.
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+//function for the current slide.
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+//function to scroll through the index of slides.
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</html>

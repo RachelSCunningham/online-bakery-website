@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--Author: Rachel Cunningham-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Online Bakery Website">
+	<meta name="keywords" content="Bakery, Rachel, Cake, Bread, Bake, Cupcake, Muffin">
+	<meta name="author" content="Rachel Cunningham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+	
+	<title>Contact Us</title>
+	
+<style>
+	/*Defines the background colour of the page as light pink.*/
+	body {
+		background-color: #FEDEF9;
+	}
+	
+	/*Defines the wrapper class in which most of the content resides. Width, margin, colour, and font styles all defined.*/
+	.wrapper {
+		width: 940px;
+		margin: 20px auto 20px auto;
+		border: 6px solid white;
+		color: white;
+		background-color: darkred;
+		font-family: 'Love Ya Like A Sister', cursive;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*Defines the page footer at the bottom of the page.*/
+	footer {
+		clear: both;
+		color: darkred;
+		background-color: #FEDEF9;
+		height: 65px;
+		text-align: center;
+		border-radius: 0px 0px 5px 5px; 
+	}
+	
+	/*gives the class 'desc' within the section its own definitions of margins and border radius.*/
+	section.desc {
+		margin: 20px 20px 20px 20px;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*defines the header image at the top of the page.*/
+	img.header {
+		display: block;
+		width: 700px;
+		border-radius: 15px 15px 15px 15px;
+		margin-left: auto;
+		margin-right: auto; 
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*describes the height of the FB image.*/
+	img.facebookImage{
+		height: 15px;
+	}
+	
+	/*Defines the sidebar menu id.*/
+	#mySidenav a {
+		position: absolute; 
+		left: 10px; 
+		transition: 0.1s; 
+		padding: 15px; 
+		width: 120px; 
+		text-decoration: none; 
+		font-family: 'Love Ya Like A Sister', cursive;
+		font-size: 20px; 
+		color: white; 
+		border-radius: 0 15px 15px 0; 
+	}
+	
+	/*Asserts the animation on hover over the ids Sidenav: i.e. on hover move to the left.*/
+	#mySidenav a:hover {
+		left: 0; 
+	}
+	
+	/*Defines each of the sidebar items and their ids.*/
+	#home {
+		top: 250px;
+		background-color: darkred;
+	}
+
+	#bread {
+		top: 310px;
+		background-color: darkred; 
+	}
+
+	#cake {
+		top: 370px;
+		background-color: darkred;
+	}
+
+	#confec {
+		top: 430px;
+		background-color: darkred;
+	}
+	
+	#logIn {
+		top: 490px;
+		background-color: darkred;
+	}
+	
+	#faq {
+		top: 550px;
+		background-color: darkred;
+	}
+	
+	#contact {
+		top: 610px;
+		background-color: darkred;
+	}
+	
+	#facebook{
+		top: 670px;
+		background-color: darkred;
+	}
+	
+	/*Gives a colour to each of the text links, light pink.*/
+	#links {
+		color: #FEDEF9;
+	}
+	
+	/*Floats iframes to the right with significant left side padding.*/
+	iframe {
+		float: right;
+		padding: 0px 120px 50px 50px;
+	}
+	
+	/*Gives the phoneLogo image class a height of 20px.*/
+	img.phoneLogo{
+		height: 20px;
+	}
+	
+	/*Gives the emailLogo image class a height of 20px.*/
+	img.emailLogo{
+		height: 20px;
+	}
+	/*Aligns the text of heading2 to the center.*/
+	h2 {
+		text-align: center;
+	}
+</style>	
+</head>
+<body>
+	<header>
+		<!--The header image of the page-->
+		<img class="header" src="images/header.png" alt="Image of logo header" title="Header Logo">
+		
+		<!--Sidebar navigation-->
+		<nav>
+			<div id="mySidenav" class="sidenav">
+				<a href="index.html" id="home">Home</a>
+				<a href="bread.html" id="bread">Breads</a>
+				<a href="cakes.html" id="cake">Cakes</a>
+				<a href="confec.html" id="confec">Confectionary</a>
+				<a href="logIn.html" id="logIn">Check Out</a>
+				<a href="faq.html" id="faq">F.A.Q.</a>
+				<a href="contactUs.html" id="contact">Contact Us</a>
+				<a href="https://www.facebook.com/search/top/?q=rachel%27s%20bakery" id="facebook" target="_blank">Facebook <img class="facebookImage" src="images/facebook.png" alt="Image of facebook logo" title="Facebook Link"></a>
+			</div>
+		</nav>
+	</header>
+	<div class="wrapper">
+		<section class="desc">
+			<h2 id="heading2">Contact us</h2>
+			<p>
+				<!--Creates an iframe with a google map location Abbey Street, Sligo.-->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2329.904551998774!2d-8.471380869904305!3d54.270266041682305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485ee8350eaf4a45%3A0xf8044300d0b8f2ec!2sAbbey+St%2C+Abbeyquarter+North%2C+Sligo!5e0!3m2!1sen!2sie!4v1494882908858" width="450" height="165" frameborder="0" style="border:0" allowfullscreen></iframe>
+				Pop in and visit our Bakery at:<br>
+				<i>Rachel's Bakery,<br>
+				Abbey Street,<br>
+				Sligo,<br>
+				Co. Sligo.</i><br>
+				<br>
+				<img class="phoneLogo" src="images/phone.png" alt="Image of phone logo" title="Phone Logo"> 071 9166666<br>
+				<img class="emailLogo" src="images/email.png" alt="Image of email logo" title="Email Logo"> enquiries@rachelsbakery.ie
+			</p>
+			<br>
+			<h3 id="heading3">Contact Form</h3>
+				<p>
+					Please fill out the form below or contact <a id="links" href="mailto:enquiries@rachelsbakery.ie?Subject=Website%20Enquiries">enquiries@rachelsbakery.ie</a> and we will reply as soon as possible.
+				</p>
+				<!--Creates a form using HTML input validation-->
+				<form>
+					Name:<br>
+					<input type="text" name="your-name" value="" size="20" autocomplete="on" required><br>
+					Email address:<br>
+					<input type="email" name="your-email" value="" size="20" autocomplete="on" required><br>
+					Phone Number:<br>
+					<input type="number" name="tel" value="" size="20" autocomplete="on" required><br>
+					Message:<br>
+					<textarea name="your-message" cols="40" rows="5" autocomplete="on" required></textarea><br>
+					<input type="submit" value="send enquiry">
+				</form>		
+		</section>
+		<!--The footer at the bottom of the page.-->
+		<footer>
+			<br>
+			<b>DISCLAIMER: This is not a real bakery or website. All images and prices are for illustration purposes only.</b><br>
+			<!--button demonstrating style change (changes headings styles) through JS/DOM-->
+			Want to change the headings? Click here:<button onclick="changeHeadings()">*</button>
+		</footer>
+	</div>
+</body>
+<script>
+//creates the function needed to change the Heading styles as prompted by the button in the footer.
+function changeHeadings(){
+	document.getElementById("heading2").style.color = "black";
+	document.getElementById("heading2").style.fontStyle = "bold";
+	document.getElementById("heading2").style.fontSize = "45px";
+	
+	document.getElementById("heading3").style.color = "#FEDEF9";
+	document.getElementById("heading3").style.fontStyle = "italic";
+	document.getElementById("heading3").style.fontSize = "30px";
+}
+</script>
+</html>

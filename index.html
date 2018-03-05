@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--Author: Rachel Cunningham-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Online Bakery Website">
+	<meta name="keywords" content="Bakery, Rachel, Cake, Bread, Bake, Cupcake, Muffin">
+	<meta name="author" content="Rachel Cunningham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+	
+	<title>Home Page</title>
+
+<style>
+	/*Defines the background colour of the page as light pink.*/
+	body {
+		background-color: #FEDEF9;
+	}
+	
+	/*Defines the wrapper class in which most of the content resides. Width, margin, colour, and font styles all defined.*/
+	.wrapper {
+		width: 940px;
+		margin: 20px auto 20px auto;
+		border: 6px solid white;
+		color: white;
+		background-color: darkred;
+		font-family: 'Love Ya Like A Sister', cursive;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*Defines the page footer at the bottom of the page.*/
+	footer {
+		clear: both;
+		color: darkred;
+		background-color: #FEDEF9;
+		height: 65px;
+		text-align: center;
+		border-radius: 0px 0px 5px 5px; 
+	}
+	
+	/*ensures the text in each section is center aligned.*/
+	section {
+		text-align: center;
+	}
+	
+	/*gives the class 'desc' within the section its own definitions of margins and border radius.*/
+	section.desc {
+		margin: 20px 20px 20px 20px;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*defines the header image at the top of the page.*/
+	img.header {
+		display: block;
+		width: 700px;
+		border-radius: 15px 15px 15px 15px;
+		margin-left: auto;
+		margin-right: auto; 
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*describes the height of the FB image.*/
+	img.facebookImage{
+		height: 15px;
+	}
+	
+	/*defines the slideshow image class for the random image slideshow.*/
+	img.slideshow {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 400px;
+		border: 10px double white;
+	}
+	
+	/*Defines the sidebar menu id.*/
+	#mySidenav a {
+		position: absolute; 
+		left: 10px; 
+		transition: 0.1s; 
+		padding: 15px; 
+		width: 120px; 
+		text-decoration: none; 
+		font-family: 'Love Ya Like A Sister', cursive;
+		font-size: 20px; 
+		color: white; 
+		border-radius: 0 15px 15px 0; 
+	}
+	
+	/*Asserts the animation on hover over the ids Sidenav: i.e. on hover move to the left.*/
+	#mySidenav a:hover {
+		left: 0; 
+	}
+	
+	/*Defines each of the sidebar items and their ids.*/
+	#home {
+		top: 250px;
+		background-color: darkred;
+	}
+
+	#bread {
+		top: 310px;
+		background-color: darkred; 
+	}
+
+	#cake {
+		top: 370px;
+		background-color: darkred;
+	}
+
+	#confec {
+		top: 430px;
+		background-color: darkred;
+	}
+	
+	#logIn {
+		top: 490px;
+		background-color: darkred;
+	}
+	
+	#faq {
+		top: 550px;
+		background-color: darkred;
+	}
+	
+	#contact {
+		top: 610px;
+		background-color: darkred;
+	}
+	
+	#facebook{
+		top: 670px;
+		background-color: darkred;
+	}
+	
+	/*Gives a colour to each of the text links, light pink.*/
+	#links {
+		color: #FEDEF9;
+	}
+	
+	/*Styles the testimonial class */
+	.testimonial {
+		width: 750px;
+		color: darkred;
+		border: 5px solid #FEDEF9;
+		background-color: white;
+		border-radius: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 15px;
+		margin-top; 15px
+		padding: 5px;
+	}
+
+	/*Clears floats after containers */
+	.testimonial::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	/*Floats the images inside the testimonials to the left and defines the margin and border radius.*/
+	.testimonial img {
+		float: left;
+		margin-right: 10px;
+		border-radius: 50%;
+	}
+
+	/*Increases the font-size of the span element.*/
+	.testimonial span {
+		font-size: 15px;
+		margin-right: 15px;
+	}
+
+	/* Adds media queries for responsiveness.*/
+	@media (max-width: 500px) {
+	  .testimonial {
+		text-align: center;
+	  }
+	/*defines the testimonial images.*/
+	  .testimonial img {
+		margin: auto;
+		float: none;
+		display: block;
+	  }
+	}
+	
+	h1 {
+	font-size: 40px;
+	color: #FEDEF9;
+	}
+</style>	
+</head>
+<body id="body">
+	<header>
+		<!--The header image of the page-->
+		<img class="header" src="images/header.png" alt="Image of logo header" title="Header Logo">
+		
+		<!--Sidebar navigation-->
+		<nav>
+			<div id="mySidenav" class="sidenav">
+				<a href="index.html" id="home">Home</a>
+				<a href="bread.html" id="bread">Breads</a>
+				<a href="cakes.html" id="cake">Cakes</a>
+				<a href="confec.html" id="confec">Confectionary</a>
+				<a href="logIn.html" id="logIn">Check Out</a>
+				<a href="faq.html" id="faq">F.A.Q.</a>
+				<a href="contactUs.html" id="contact">Contact Us</a>
+				<a href="https://www.facebook.com/search/top/?q=rachel%27s%20bakery" id="facebook" target="_blank">Facebook <img class="facebookImage" src="images/facebook.png" alt="Image of facebook logo" title="Facebook Link"></a>
+			</div>
+		</nav>
+	</header>
+	<div class="wrapper">
+		<section class="desc">
+			<!--Describes the bakery-->
+			<h1>Welcome to Rachel's Bakery!</h1>
+			<figure>
+				<!--A random image slideshow prompted on page refresh-->
+				<img class="slideshow" id="image" alt="Slideshow of Bakery Images" title="Image Slideshow"></img>
+			</figure>
+			<p>
+				Established in 2015, Rachel's Bakery is an online Bakery service based in County Sligo.<br>
+				<br>
+				All our goods are homebaked and made fresh upon receiving orders. Rachel Smith has over 25 years experience as a professional baker. She began Rachel's bakery 10 years ago and took the business online in 2015. Having a passion for baked goods and she wanted desire to ensure that everyone could enjoy delicious quality home made baking delivered right to their door. Currently the delivery services includes our <a id="links" href="bread.html">breads</a> and <a id="links" href="cakes.html">cakes</a>, while there are many other smaller <a id="links" href="confec.html">confectionary</a> products available in store. Today there are six full time employees at 'Rachel's Bakery' who all work very hard to provide you with only the very best! See some of the support from customers that we have kindly received below!
+			</p>
+		</section>
+		<section>
+			<br>
+			<!--Testimonial section-->
+			<div class="testimonial">
+			  <img src="images/male.jpeg" alt="Avatar" style="width:70px">
+			  <p><span>Chris Moore.</span> Manager, Crystal B&Bs.</p>
+			  <p>"We choose Rachel's Bakery to deliver us their fresh produce for breakfasts at our B&Bs every day. The food is always delicious, our guests love it, and the delivery is always prompt. Very happy with their service."</p>
+			</div>
+			
+			<div class="testimonial">
+			  <img src="images/female2.png" alt="Avatar" style="width:70px">
+			  <p><span >Becca White.</span> Actress, RTE.</p>
+			  <p>"Rachel's Bakery made my wedding cake and couldn't have been happier, their cake was the cherry on top of our big day!"</p>
+			</div>
+		</section>
+		<!--footer section-->
+		<footer>
+			<br>
+			<b>DISCLAIMER: This is not a real bakery or website. All images and prices are for illustration purposes only.</b><br>
+			<!--button demonstrating style change (changes background colour to blue) through JS/DOM-->
+			Hate all this pink? Click here:<button onclick="changeBody()">*</button>
+		</footer>
+	</div>
+</body>
+<script>
+//the array of images used in a the sideshow.
+var description = [
+	"images/bread/white.png",
+	"images/bread/soda.png",
+	"images/bread/spelt.png",
+	"images/bread/scone.png",
+	"images/bread/roll.png",
+	"images/cake/choc.png",
+	"images/cake/carrot.png",
+	"images/cake/lemon.png",
+	"images/cake/fruit.png",
+	"images/cake/strawberry.png",
+	"images/cake/speciality.jpg",
+	"images/confec/brownies.png",
+	"images/confec/cupcake2.jpeg",
+	"images/confec/muffin.png",
+	"images/confec/danish.png",
+	"images/confec/doughnut.png",
+	"images/confec/eclair.png"
+];
+//randomises the images in the slideshow.
+var size = description.length
+var x = Math.floor(size*Math.random())
+document.getElementById('image').src=description[x];
+
+//creates the function needed to change the background as prompted by the button in the footer.
+function changeBody(){
+	document.getElementById("body").style.background = "lightblue";	
+}
+</script>
+</html>

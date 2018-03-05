@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<!--Author: Rachel Cunningham-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Online Bakery Website">
+	<meta name="keywords" content="Bakery, Rachel, Cake, Bread, Bake, Cupcake, Muffin">
+	<meta name="author" content="Rachel Cunningham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+	
+	<title>Cake Products</title>
+	
+<style>
+	/*Defines the background colour of the page as light pink.*/
+	body {
+		background-color: #FEDEF9;
+	}
+	
+	/*Defines the wrapper class in which most of the content resides. Width, margin, colour, and font styles all defined.*/
+	.wrapper {
+		width: 940px;
+		margin: 20px auto 20px auto;
+		border: 6px solid white;
+		color: white;
+		background-color: darkred;
+		font-family: 'Love Ya Like A Sister', cursive;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*Defines the page footer at the bottom of the page.*/
+	footer {
+		clear: both;
+		color: darkred;
+		background-color: #FEDEF9;
+		height: 65px;
+		text-align: center;
+		border-radius: 0px 0px 5px 5px; 
+	}
+	
+	/*ensures the text in each section is center aligned.*/
+	section {
+		text-align: center;
+	}
+
+	/*gives the class 'desc' within the section its own definitions of margins and border radius.*/
+	section.desc {
+		margin: 20px 20px 20px 20px;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*defines the header image at the top of the page.*/
+	img.header {
+		display: block;
+		width: 700px;
+		border-radius: 15px 15px 15px 15px;
+		margin-left: auto;
+		margin-right: auto; 
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*describes the height of the FB image.*/
+	img.facebookImage{
+		height: 15px;
+	}
+	
+	/*Defines the sidebar menu id.*/
+	#mySidenav a {
+		position: absolute; 
+		left: 10px; 
+		transition: 0.1s; 
+		padding: 15px; 
+		width: 120px; 
+		text-decoration: none; 
+		font-family: 'Love Ya Like A Sister', cursive;
+		font-size: 20px; 
+		color: white; 
+		border-radius: 0 15px 15px 0; 
+	}
+	
+	/*Asserts the animation on hover over the ids Sidenav: i.e. on hover move to the left.*/
+	#mySidenav a:hover {
+		left: 0; 
+	}
+	
+	/*Defines each of the sidebar items and their ids.*/
+	#home {
+		top: 250px;
+		background-color: darkred;
+	}
+
+	#bread {
+		top: 310px;
+		background-color: darkred; 
+	}
+
+	#cake {
+		top: 370px;
+		background-color: darkred;
+	}
+
+	#confec {
+		top: 430px;
+		background-color: darkred;
+	}
+	
+	#logIn {
+		top: 490px;
+		background-color: darkred;
+	}
+	
+	#faq {
+		top: 550px;
+		background-color: darkred;
+	}
+	
+	#contact {
+		top: 610px;
+		background-color: darkred;
+	}
+	
+	#facebook{
+		top: 670px;
+		background-color: darkred;
+	}
+	
+	/*Defines the images which are links.*/
+	.linkImage{
+		width: 300px;
+		height: 198px;
+		border: 10px solid white;
+	}
+	
+	/*Defines each class in article including their floating position.*/
+	article.choc {
+		padding-top: 5px;
+		padding-right: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		background-color: darkred;
+		float: left;
+	}
+	
+	article.carrot {
+		padding-top: 5px;
+		padding-right: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		background-color: darkred;
+		float: right;
+	}
+	
+	article.lemon {
+		padding-top: 5px;
+		padding-right: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		background-color: darkred;
+		float: left;
+		clear: left;
+	}
+	
+	article.fruit {
+		padding-top: 5px;
+		padding-right: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		background-color: darkred;
+		float: right;
+	}
+	
+	article.sberry {
+		padding-top: 5px;
+		padding-right: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		background-color: darkred;
+		float: left;
+		clear: left;
+	}
+	
+	article.spec {
+		padding-top: 5px;
+		padding-right: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		background-color: darkred;
+		float: right;
+	}
+</style>	
+</head>
+
+<body>
+	<header>
+		<!--The header image of the page-->
+		<img class="header" src="images/header.png" alt="Image of logo header" title="Header Logo">
+		
+		<!--Sidebar navigation-->
+		<nav>
+			<div id="mySidenav" class="sidenav">
+				<a href="index.html" id="home">Home</a>
+				<a href="bread.html" id="bread">Breads</a>
+				<a href="cakes.html" id="cake">Cakes</a>
+				<a href="confec.html" id="confec">Confectionary</a>
+				<a href="logIn.html" id="logIn">Check Out</a>
+				<a href="faq.html" id="faq">F.A.Q.</a>
+				<a href="contactUs.html" id="contact">Contact Us</a>
+				<a href="https://www.facebook.com/search/top/?q=rachel%27s%20bakery" id="facebook" target="_blank">Facebook <img class="facebookImage" src="images/facebook.png" alt="Image of facebook logo" title="Facebook Link"></a>
+			</div>
+		</nav>
+	</header>
+	<div class="wrapper">
+		<section class="desc">
+			<!--Inserts an iframe with a youtube video-->
+			<iframe width="360" height="200" src="https://www.youtube.com/embed/QQtClG2Hwpg" frameborder="0" allowfullscreen></iframe>
+			<!--blank headings and paragraphs accessed and changed within the DOM-->
+			<h3 id="changeH">BLANK</h3>
+			<p id="changeText">
+				ALSO BLANK
+			</p>
+			<p id="changeText2">
+				AGAIN, BLANK
+			</p>
+			<!--Each article image contains a hyperlink to a page containing further information.--> 
+			<article class="choc">
+				<figure>
+					<a id="links" href="cake/choclate.html"><img class="linkImage" src="images/cake/choc.png" alt="Image of chocolate cake" title="Chocolate Cake"></a>
+				</figure>
+			</article>
+			<article class="carrot">
+				<figure>
+					<a id="links" href="cake/carrot.html"><img class="linkImage" src="images/cake/carrot.png" alt="Image of carrot cake" title="Carrot Cake"></a>
+				</figure>
+			</article>
+			<article class="lemon">
+				<figure>
+					<a id="links" href="cake/lemon.html"><img class="linkImage" src="images/cake/lemon.png" alt="Image of lemon cake" title="Lemon Cake"></a>
+				</figure>
+			</article>
+			<article class="fruit">
+				<figure>
+					<a id="links" href="cake/fruit.html"><img class="linkImage" src="images/cake/fruit.png" alt="Image of fruit cake" title="Fruit Cake"></a>
+				</figure>
+			</article>
+			<article class="sberry">
+				<figure>
+					<a id="links" href="cake/strawberry.html"><img class="linkImage" src="images/cake/strawberry.png" alt="Image of strawberry cake" title="Strawberry Cake"></a>
+				</figure>
+			</article>
+			<article class="spec">
+				<figure>
+					<a id="links" href="cake/special.php"><img class="linkImage" src="images/cake/speciality.jpg" alt="Image of wedding cake" title="Speciality Cakes"></a>
+				</figure>
+			</article>	
+		</section>
+		<!--The page footer-->		
+		<footer>
+			<br>
+			<b>DISCLAIMER: This is not a real bakery or website. All images and prices are for illustration purposes only.</b>
+		</footer>
+	</div>
+</body>
+<script>
+//This changes the inner HTML content text by getting the elements by ID (see lines 217-224).
+document.getElementById("changeH").innerHTML = "View our range of Cakes below:";
+document.getElementById("changeText").innerHTML = "All these products are available in store and for delivery.";
+document.getElementById("changeText2").innerHTML = "Click the images for more information";
+</script>
+</html>

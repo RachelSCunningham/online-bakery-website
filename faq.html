@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--Author: Rachel Cunningham-->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Online Bakery Website">
+	<meta name="keywords" content="Bakery, Rachel, Cake, Bread, Bake, Cupcake, Muffin">
+	<meta name="author" content="Rachel Cunningham">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+	
+	<title>F.A.Q.</title>
+	
+<style>
+	/*Defines the background colour of the page as light pink.*/
+	body {
+		background-color: #FEDEF9;
+	}
+	
+	/*Defines the wrapper class in which most of the content resides. Width, margin, colour, and font styles all defined.*/
+	.wrapper {
+		width: 940px;
+		margin: 20px auto 20px auto;
+		border: 6px solid white;
+		color: white;
+		background-color: darkred;
+		font-family: 'Love Ya Like A Sister', cursive;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*Defines the page footer at the bottom of the page.*/
+	footer {
+		clear: both;
+		color: darkred;
+		background-color: #FEDEF9;
+		height: 65px;
+		text-align: center;
+		border-radius: 0px 0px 5px 5px; 
+	}
+	
+	/*gives the class 'desc' within the section its own definitions of margins and border radius.*/
+	section.desc {
+		margin: 20px 20px 20px 20px;
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*defines the header image at the top of the page.*/
+	img.header {
+		display: block;
+		width: 700px;
+		border-radius: 15px 15px 15px 15px;
+		margin-left: auto;
+		margin-right: auto; 
+		border-radius: 15px 15px 15px 15px; 
+	}
+	
+	/*describes the height of the FB image.*/
+	img.facebookImage{
+		height: 15px;
+	}
+	
+	/*Defines the sidebar menu id.*/
+	#mySidenav a {
+		position: absolute; 
+		left: 10px; 
+		transition: 0.1s; 
+		padding: 15px; 
+		width: 120px; 
+		text-decoration: none; 
+		font-family: 'Love Ya Like A Sister', cursive;
+		font-size: 20px; 
+		color: white; 
+		border-radius: 0 15px 15px 0; 
+	}
+	
+	/*Asserts the animation on hover over the ids Sidenav: i.e. on hover move to the left.*/
+	#mySidenav a:hover {
+		left: 0; 
+	}
+	
+	/*Defines each of the sidebar items and their ids.*/
+	#home {
+		top: 250px;
+		background-color: darkred;
+	}
+
+	#bread {
+		top: 310px;
+		background-color: darkred; 
+	}
+
+	#cake {
+		top: 370px;
+		background-color: darkred;
+	}
+
+	#confec {
+		top: 430px;
+		background-color: darkred;
+	}
+	
+	#logIn {
+		top: 490px;
+		background-color: darkred;
+	}
+	
+	#faq {
+		top: 550px;
+		background-color: darkred;
+	}
+	
+	#contact {
+		top: 610px;
+		background-color: darkred;
+	}
+	
+	#facebook{
+		top: 670px;
+		background-color: darkred;
+	}
+	
+	/*Gives a colour to each of the text links, light pink.*/
+	#links {
+		color: #FEDEF9;
+	}
+	
+	/*Aligns the text of heading2 to the center.*/
+	h2 {
+		text-align: center;
+	}
+</style>	
+</head>
+<body>
+	<header>
+		<!--The header image of the page-->
+		<img class="header" src="images/header.png" alt="Image of logo header" title="Header Logo">
+		
+		<!--Sidebar navigation-->
+		<nav>
+			<div id="mySidenav" class="sidenav">
+				<a href="index.html" id="home">Home</a>
+				<a href="bread.html" id="bread">Breads</a>
+				<a href="cakes.html" id="cake">Cakes</a>
+				<a href="confec.html" id="confec">Confectionary</a>
+				<a href="logIn.html" id="logIn">Check Out</a>
+				<a href="faq.html" id="faq">F.A.Q.</a>
+				<a href="contactUs.html" id="contact">Contact Us</a>
+				<a href="https://www.facebook.com/search/top/?q=rachel%27s%20bakery" id="facebook" target="_blank">Facebook <img class="facebookImage" src="images/facebook.png" alt="Image of facebook logo" title="Facebook Link"></a>
+			</div>
+		</nav>
+	</header>
+	<div class="wrapper">
+		<section id="text" class="desc">
+			<h2>Frequently Asked Questions</h2>
+			<p>
+				<!--Creates an unordered list of FAQ and answers.-->
+				<ul>
+					<li><b>I have decided to place an order. How soon can you deliver to me?</b><br></li>
+						Great! If you place an order for baked goods by 4.30pm we will be able to deliver the order to your door by the next morning. Exceptions include speciality cakes, if you wish to discuss options for cakes please <a id="links" href="contactUs.html">Contact Us</a> and we can discuss options.<br>
+					<br>
+					<li><b>Where do you deliver to?</b><br></li>
+						Currently we only deliver within Connaught, although we hope to expand our service in the near future.<br>
+					<br>
+					<li><b>How much is delivery?</b><br></li>
+						Delivery charges are a fixed 5 euro rate.<br>
+					<br>
+					<li><b>Do you have pick up options?</b><br></li>
+						Yes. If you prefer you can pick up the next day for free.<br>
+					<br>
+					<li><b>Why can't I order smaller confectionary products to be deilvered?</b><br></li>
+						We would love to be able to deliver all our products to you, and one day we really hope it will happen! However, as we are still a small bakery it would be expensive for us to deliver our smaller and cheaper products; we just don't have the manpower yet! However, they are still available in store in Sligo every day.<br>
+					<br>
+					<li><b>Can you do inscriptions on cakes?</b><br></li>
+						Yes, we provide and inscription service free of charge.<br>
+					<br>
+					<li><b>I have a gluten/dairy/egg allergy. Do you have options for me?</b><br></li>
+						Certainly! We can make allergy-friendly cakes specific to your needs. <a id="links" href="contactUs.html">Contact Us</a> and let us know what you need.<br>
+				</ul>
+			</p>
+		</section>
+		<!--Footer at the bottom of the page-->
+		<footer>
+			<br>
+			<b>DISCLAIMER: This is not a real bakery or website. All images and prices are for illustration purposes only.</b><br>
+			<!--button demonstrating style change (changes text style) through JS/DOM-->
+			Text too small? Click here:<button onclick="changeText()">*</button>
+		</footer>
+	</div>
+</body>
+<script>
+//creates the function needed to change the font style as prompted by the button in the footer.
+function changeText(){
+	document.getElementById("text").style.font = "italic 20px arial,sans-serif";	
+}
+</script>
+</html>
